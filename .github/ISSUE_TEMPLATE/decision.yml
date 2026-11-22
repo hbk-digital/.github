@@ -7,6 +7,7 @@ body:
       value: >
         Discuss here. Once accepted, record the decision in
         `decisions/NNNN-<title>.md` and set Decision status to accepted.
+        After creating, set Target date (decide by) in the sidebar.
   - type: textarea
     id: context
     attributes:
@@ -31,11 +32,6 @@ body:
     id: recommendation
     attributes:
       label: Recommendation
-  - type: input
-    id: deadline
-    attributes:
-      label: Decide by
-      placeholder: YYYY-MM-DD
   - type: checkboxes
     id: confidentiality
     attributes:

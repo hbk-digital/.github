@@ -1,0 +1,43 @@
+name: Initiative
+description: An outcome-level piece of work spanning one or more deliverables.
+type: Initiative
+body:
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What changes when this is done?
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Success criteria
+      description: How will we know it is achieved? One per line.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      value: |
+        In:
+        -
+        Out:
+        -
+  - type: input
+    id: repos
+    attributes:
+      label: Repositories involved
+      placeholder: e.g. area-repo, code-repo
+  - type: textarea
+    id: risks
+    attributes:
+      label: Key risks and dependencies
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Confidentiality
+      options:
+        - label: This issue contains no client data or confidential figures.
+          required: true

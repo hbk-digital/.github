@@ -1,0 +1,45 @@
+name: Decision
+description: A decision to be made. Once accepted, record it in decisions/.
+type: Decision
+body:
+  - type: markdown
+    attributes:
+      value: >
+        Discuss here. Once accepted, record the decision in
+        `decisions/NNNN-<title>.md` and set Decision status to accepted.
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why is a decision needed?
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options considered
+      value: |
+        1. Option:
+           Pros:
+           Cons:
+        2. Option:
+           Pros:
+           Cons:
+    validations:
+      required: true
+  - type: textarea
+    id: recommendation
+    attributes:
+      label: Recommendation
+  - type: input
+    id: deadline
+    attributes:
+      label: Decide by
+      placeholder: YYYY-MM-DD
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Confidentiality
+      options:
+        - label: This issue contains no client data or confidential figures.
+          required: true

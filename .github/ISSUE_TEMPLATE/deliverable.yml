@@ -1,0 +1,37 @@
+name: Deliverable
+description: A concrete output that contributes to an initiative.
+type: Deliverable
+body:
+  - type: input
+    id: parent
+    attributes:
+      label: Parent initiative
+      placeholder: e.g. area-repo#1
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is being produced?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: One per line.
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Output location
+      placeholder: e.g. projects/<slug>/docs/<file>.md
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Confidentiality
+      options:
+        - label: This issue contains no client data or confidential figures.
+          required: true

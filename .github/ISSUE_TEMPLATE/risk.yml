@@ -1,0 +1,30 @@
+name: Risk
+description: A risk register entry. Set Likelihood and Impact in the sidebar after creating.
+type: Risk
+body:
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk
+      description: What could happen?
+    validations:
+      required: true
+  - type: textarea
+    id: cause
+    attributes:
+      label: Cause
+  - type: textarea
+    id: consequence
+    attributes:
+      label: Consequence
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Proposed mitigation
+  - type: checkboxes
+    id: confidentiality
+    attributes:
+      label: Confidentiality
+      options:
+        - label: This issue contains no client data or confidential figures.
+          required: true
